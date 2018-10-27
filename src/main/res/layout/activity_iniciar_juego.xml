@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IniciarJuego">
+
+    <LinearLayout
+        android:id="@+id/Hola"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtPuntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puntos"/>
+
+        <Button
+            android:id="@+id/btnFinalizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar"
+            android:layout_gravity="right"
+            android:singleLine="true"
+            android:onClick="cerrar"/>
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPU"
+            android:layout_gravity="center_horizontal"/>
+        <Button
+            android:id="@+id/btncpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="?"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/idNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnPiedra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:singleLine="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onClick"
+                />
+
+            <Button
+                android:id="@+id/btnPapel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[_]"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onClick"
+                />
+
+            <Button
+                android:id="@+id/btnTijera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:onClick="onClick"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/txtganados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ganados:"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:id="@+id/txtPerdidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perdidos"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/btnPapel"
+                android:layout_alignStart="@+id/btnPapel"/>
+
+            <TextView
+                android:id="@+id/txtEmpatados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empatados"
+                android:layout_alignBottom="@+id/txtPerdidos"
+                android:layout_alignLeft="@+id/btnTijera"
+                android:layout_alignStart="@+id/btnTijera"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
